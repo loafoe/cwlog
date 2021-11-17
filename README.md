@@ -14,6 +14,7 @@ Use environment variables
 
 | Variable | Description | Required |
 |----------|-------------|----------|
+| AWS_REGION | The AWS Region to use | Y |
 | AWS_ACCESS_KEY_ID | AWS Access Key | Y |
 | AWS_SECRET_ACCESS_KEY | AWS Secret Key | Y |
 | CWLOG_GROUP | The Cloudwatch Group to use | Y |
@@ -27,6 +28,7 @@ Docker builds are available: [philipslabs/cwlog](https://hub.docker.com/r/philip
 
 ```shell
 docker run --rm \
+  -e AWS_REGION=us-east-2 \
   -e AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID) \
   -e AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) \
   -e CWLOG_GROUP=/aws/sagemaker/ProcessingJobs \
@@ -43,6 +45,7 @@ Use a `manifest.yml` like below:
 applications:
 - name: cwlog
   env:
+    AWS_REGION: us-east-2
     AWS_SECRET_ACCESS_KEY: XXX
     AWS_ACCESS_KEY_ID: YYY
     CWLOG_GROUP: "/aws/sagemaker/ProcessingJobs"
