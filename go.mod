@@ -1,4 +1,4 @@
-module github.com/philips-software/cwlog
+module github.com/philips-labs/cwlog
 
 go 1.17
 

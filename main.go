@@ -7,7 +7,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudwatchlogs"
-	"github.com/philips-software/cwlog/hsdp"
+	"github.com/philips-labs/cwlog/hsdp"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 )
