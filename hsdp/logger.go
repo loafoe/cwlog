@@ -14,7 +14,7 @@ func StartLogger(group, stream string) (chan cloudwatchlogs.OutputLogEvent, chan
 		for {
 			select {
 			case msg := <-logChan:
-				fmt.Printf("CustomLogEvent|%s|%s|%s|%s|%s\n", "1", "2", "3", stream, *msg.Message)
+				fmt.Printf("INFO|CustomLogEvent|%s|%s|%s|%s|%s\n", "1", "2", "3", stream, *msg.Message)
 			case <-doneChan:
 				fmt.Printf("exiting logger\n")
 				return
